@@ -1,0 +1,8 @@
+.inputFilter {
+  font-size: 20px;
+  border-radius: 8px;
+}
+
+.inputFilter:focus {
+  outline-color: #06ec25;
+}
