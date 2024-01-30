@@ -37,16 +37,15 @@ export const App = () => {
 
   const handleFilter = evt => {
     evt.preventDefault();
-    if (evt.target.value === null) {
-      setFilter('');
-    }
+
     setFilter(evt.target.value.toLowerCase());
   };
 
   const showFilteredContacts = () => {
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter)
-    );
+    if (contacts)
+      return contacts.filter(contact =>
+        contact.name.toLowerCase().includes(filter)
+      );
   };
 
   useEffect(() => {
