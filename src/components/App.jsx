@@ -37,6 +37,9 @@ export const App = () => {
 
   const handleFilter = evt => {
     evt.preventDefault();
+    if (evt.target.value === null) {
+      setFilter('');
+    }
     setFilter(evt.target.value.toLowerCase());
   };
 
@@ -48,6 +51,7 @@ export const App = () => {
 
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
+    console.log(filter);
   });
 
   return (
